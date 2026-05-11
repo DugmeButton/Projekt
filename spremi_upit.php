@@ -1,49 +1,61 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "kontakt");
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "kontakt";
+
+$conn = new mysqli($host, $user, $password, $database);
 
 if ($conn->connect_error) {
-    die("Greška pri spajanju s bazom.");
+    $saved = false;
+} else {
+    $ime = trim($_POST["ime"] ?? "");
+    $prezime = trim($_POST["prezime"] ?? "");
+    $email = trim($_POST["email"] ?? "");
+    $upit = trim($_POST["upit"] ?? "");
+
+    if ($ime !== "" && $prezime !== "" && $email !== "" && $upit !== "") {
+        $stmt = $conn->prepare("INSERT INTO upiti (ime, prezime, email, upit) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $ime, $prezime, $email, $upit);
+        $saved = $stmt->execute();
+        $stmt->close();
+    } else {
+        $saved = false;
+    }
+
+    $conn->close();
 }
-
-$ime = $_POST['ime'] ?? '';
-$prezime = $_POST['prezime'] ?? '';
-$email = $_POST['email'] ?? '';
-$upit = $_POST['upit'] ?? '';
-
-$stmt = $conn->prepare("INSERT INTO upiti (ime, prezime, email, upit) VALUES (?, ?, ?, ?)");
-$stmt->bind_param("ssss", $ime, $prezime, $email, $upit);
-
-$uspjeh = $stmt->execute();
-
-$stmt->close();
-$conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poruka poslana</title>
+    <title>Upit</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css?v=20">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="success-header">
-    <div class="success-box">
-        <?php if ($uspjeh): ?>
-            <h1>Upit je uspješno poslan!</h1>
-            <p>Hvala vam na poruci. Javit ćemo vam se u najkraćem roku.</p>
-            <a href="kontakt.html" class="btn">Pošalji novi upit</a>
-            <a href="index.html" class="btn secondary">Povratak na početnu</a>
+<main class="success-page">
+    <section class="success-box">
+        <?php if ($saved): ?>
+            <h1>Upit je poslan</h1>
+            <p>Hvala na poruci. Odgovorit ćemo u najkraćem roku.</p>
+            <div class="hero-actions">
+                <a href="kontakt.html" class="btn">Novi upit</a>
+                <a href="index.html" class="btn btn-light">Početna</a>
+            </div>
         <?php else: ?>
-            <h1>Došlo je do greške</h1>
-            <p>Upit nije spremljen. Pokušajte ponovno.</p>
-            <a href="kontakt.html" class="btn">Pokušaj ponovno</a>
+            <h1>Upit nije poslan</h1>
+            <p>Provjeri podatke i pokušaj ponovno.</p>
+            <div class="hero-actions">
+                <a href="kontakt.html" class="btn">Pokušaj ponovno</a>
+                <a href="index.html" class="btn btn-light">Početna</a>
+            </div>
         <?php endif; ?>
-    </div>
-</header>
+    </section>
+</main>
 
 </body>
 </html>

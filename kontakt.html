@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt</title>
     <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="contact-header">
+<header class="page-header contact-header">
     <div class="hero-content">
-        <span class="eyebrow">Pošalji upit</span>
-        <h1>Kontaktirajte nas</h1>
-        <p>Pošaljite nam poruku ili pitanje vezano uz putovanja</p>
+        <span class="eyebrow">Kontakt</span>
+        <h1>Pošalji upit</h1>
+        <p>Javi se za više informacija o putovanjima i dostupnim ponudama.</p>
     </div>
 </header>
 
@@ -26,7 +26,7 @@
 </nav>
 
 <main class="contact-box">
-    <h2>Javite nam se</h2>
+    <h2>Kontakt obrazac</h2>
     <form action="spremi_upit.php" method="POST">
         <label for="ime">Ime</label>
         <input type="text" id="ime" name="ime" required>
@@ -38,7 +38,7 @@
         <input type="email" id="email" name="email" required>
 
         <label for="upit">Poruka</label>
-        <textarea id="upit" name="upit" rows="7" required></textarea>
+        <textarea id="upit" name="upit" required></textarea>
 
         <button type="submit">Pošalji upit</button>
     </form>

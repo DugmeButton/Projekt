@@ -3,17 +3,22 @@ function changeSlide(button, direction) {
     const images = slideshow.querySelectorAll('.slides img');
     let activeIndex = 0;
 
-    images.forEach((img, index) => {
-        if (img.classList.contains('active')) {
+    images.forEach((image, index) => {
+        if (image.classList.contains('active')) {
             activeIndex = index;
-            img.classList.remove('active');
+            image.classList.remove('active');
         }
     });
 
-    let newIndex = activeIndex + direction;
+    let nextIndex = activeIndex + direction;
 
-    if (newIndex < 0) newIndex = images.length - 1;
-    if (newIndex >= images.length) newIndex = 0;
+    if (nextIndex < 0) {
+        nextIndex = images.length - 1;
+    }
 
-    images[newIndex].classList.add('active');
+    if (nextIndex >= images.length) {
+        nextIndex = 0;
+    }
+
+    images[nextIndex].classList.add('active');
 }
