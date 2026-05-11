@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svjetska karta destinacija</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+<header class="map-header">
+    <div class="hero-content">
+        <span class="eyebrow">Interaktivna karta</span>
+        <h1>Svjetska karta avantura</h1>
+        <p>Sve destinacije na jednom mjestu</p>
+    </div>
+</header>
+
+<nav class="meni">
+    <a href="index.html">Početna</a>
+    <a href="destinacije.html">Destinacije</a>
+    <a href="avanture.html">Avanture</a>
+    <a href="karta.html">Karta</a>
+    <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<main class="map-page">
+    <section class="hero map-intro">
+        <span class="eyebrow">Lokacije</span>
+        <h2>Pregled svih putovanja</h2>
+        <p>Klikni na oznake na karti i pogledaj gdje se nalaze destinacije i avanture.</p>
+    </section>
+    <div id="map"></div>
+</main>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const map = L.map('map').setView([20, 0], 2);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+}).addTo(map);
+
+const locations = [
+    [48.8584, 2.2945, 'Pariz'],
+    [41.8902, 12.4922, 'Rim'],
+    [41.3851, 2.1734, 'Barcelona'],
+    [52.3676, 4.9041, 'Amsterdam'],
+    [51.5007, -0.1246, 'London'],
+    [45.9763, 7.6586, 'Alpe'],
+    [4.1755, 73.5093, 'Maldivi'],
+    [-1.4061, 35.0086, 'Safari Afrika'],
+    [-45.0220, 168.7770, 'Bungee Jumping'],
+    [47.5615, 13.6495, 'Kampiranje'],
+    [24.8667, 55.3860, 'Dubai pustinja'],
+    [62.1049, 7.2057, 'Norveški fjordovi'],
+    [64.3136, -20.3024, 'Island'],
+    [9.3927, -84.1400, 'Tropska džungla'],
+    [-44.8710, 167.9090, 'Novi Zeland']
+];
+
+locations.forEach(location => {
+    L.marker([location[0], location[1]]).addTo(map).bindPopup(`<b>${location[2]}</b>`);
+});
+</script>
+
+<footer>
+    <p>© 2026 Avanturistička Putovanja</p>
+</footer>
+
+</body>
+</html>

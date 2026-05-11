@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinacije</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+<header>
+    <div class="hero-content">
+        <span class="eyebrow">Odabrana mjesta</span>
+        <h1>Najljepše Destinacije Svijeta</h1>
+        <p>Istraži mjesta koja oduzimaju dah</p>
+    </div>
+</header>
+
+<nav class="meni">
+    <a href="index.html">Početna</a>
+    <a href="destinacije.html">Destinacije</a>
+    <a href="avanture.html">Avanture</a>
+    <a href="karta.html">Karta</a>
+    <a href="kontakt.html">Kontakt</a>
+</nav>
+
+<section class="hero">
+    <span class="eyebrow">City break</span>
+    <h2>Najtraženije europske destinacije</h2>
+    <p>Od romantike Pariza do energije Barcelone, izaberi putovanje koje najviše odgovara tvom stilu.</p>
+</section>
+
+<main class="container">
+
+    <article class="card">
+        <div class="slideshow">
+            <button class="prev" onclick="changeSlide(this,-1)">❮</button>
+            <div class="slides">
+                <img src="slike/pariz.jpg" class="active" alt="Pariz">
+                <img src="slike/pariz2.jpg" alt="Pariz">
+                <img src="slike/pariz3.jpg" alt="Pariz">
+            </div>
+            <button class="next" onclick="changeSlide(this,1)">❯</button>
+        </div>
+        <div class="desno">
+            <h2>Pariz, Francuska</h2>
+            <p>Grad umjetnosti, mode i romantike. Idealno mjesto za šetnje, muzeje, odličnu hranu i prepoznatljive znamenitosti.</p>
+            <div class="info"><span>5 dana</span><span>850€</span><span>Romantika</span></div>
+            <iframe src="https://www.google.com/maps?q=48.8584,2.2945&output=embed" loading="lazy"></iframe>
+        </div>
+    </article>
+
+    <article class="card">
+        <div class="slideshow">
+            <button class="prev" onclick="changeSlide(this,-1)">❮</button>
+            <div class="slides">
+                <img src="slike/rim.jpg" class="active" alt="Rim">
+                <img src="slike/rim2.jpg" alt="Rim">
+                <img src="slike/rim3.jpg" alt="Rim">
+            </div>
+            <button class="next" onclick="changeSlide(this,1)">❯</button>
+        </div>
+        <div class="desno">
+            <h2>Rim, Italija</h2>
+            <p>Koloseum, Vatikan, povijesne ulice i talijanska kuhinja čine Rim savršenim izborom za kulturno putovanje.</p>
+            <div class="info"><span>4 dana</span><span>620€</span><span>Kultura</span></div>
+            <iframe src="https://www.google.com/maps?q=41.8902,12.4922&output=embed" loading="lazy"></iframe>
+        </div>
+    </article>
+
+    <article class="card">
+        <div class="slideshow">
+            <button class="prev" onclick="changeSlide(this,-1)">❮</button>
+            <div class="slides">
+                <img src="slike/barcelona.jpg" class="active" alt="Barcelona">
+                <img src="slike/barcelona2.jpg" alt="Barcelona">
+                <img src="slike/barcelona3.jpg" alt="Barcelona">
+            </div>
+            <button class="next" onclick="changeSlide(this,1)">❯</button>
+        </div>
+        <div class="desno">
+            <h2>Barcelona, Španjolska</h2>
+            <p>Gaudí arhitektura, mediteranske plaže i odlična atmosfera čine Barcelonu jednom od najživljih destinacija.</p>
+            <div class="info"><span>6 dana</span><span>780€</span><span>More i grad</span></div>
+            <iframe src="https://www.google.com/maps?q=41.3851,2.1734&output=embed" loading="lazy"></iframe>
+        </div>
+    </article>
+
+    <article class="card">
+        <div class="slideshow">
+            <button class="prev" onclick="changeSlide(this,-1)">❮</button>
+            <div class="slides">
+                <img src="slike/amsterdam.jpg" class="active" alt="Amsterdam">
+                <img src="slike/amsterdam2.jpg" alt="Amsterdam">
+                <img src="slike/amsterdam3.jpg" alt="Amsterdam">
+            </div>
+            <button class="next" onclick="changeSlide(this,1)">❯</button>
+        </div>
+        <div class="desno">
+            <h2>Amsterdam, Nizozemska</h2>
+            <p>Kanali, bicikli, muzeji i opušten stil života stvaraju poseban doživljaj grada koji se lako istražuje.</p>
+            <div class="info"><span>4 dana</span><span>690€</span><span>Grad</span></div>
+            <iframe src="https://www.google.com/maps?q=52.3676,4.9041&output=embed" loading="lazy"></iframe>
+        </div>
+    </article>
+
+    <article class="card">
+        <div class="slideshow">
+            <button class="prev" onclick="changeSlide(this,-1)">❮</button>
+            <div class="slides">
+                <img src="slike/london.jpg" class="active" alt="London">
+                <img src="slike/london2.jpg" alt="London">
+                <img src="slike/london3.jpg" alt="London">
+            </div>
+            <button class="next" onclick="changeSlide(this,1)">❯</button>
+        </div>
+        <div class="desno">
+            <h2>London, Engleska</h2>
+            <p>Big Ben, muzeji, parkovi i moderna metropola nude savršen spoj tradicije i urbanog života.</p>
+            <div class="info"><span>5 dana</span><span>900€</span><span>Metropola</span></div>
+            <iframe src="https://www.google.com/maps?q=51.5007,-0.1246&output=embed" loading="lazy"></iframe>
+        </div>
+    </article>
+
+</main>
+
+<script src="script.js"></script>
+
+<footer>
+    <p>© 2026 Avanturistička Putovanja</p>
+</footer>
+
+</body>
+</html>
