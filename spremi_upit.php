@@ -1,28 +1,21 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "kontakt";
+$conn = new mysqli("localhost", "root", "", "kontakt");
+$poruka = "Upit nije poslan.";
 
-$conn = new mysqli($host, $user, $password, $database);
+if (!$conn->connect_error) {
+    $ime = $_POST["ime"] ?? "";
+    $prezime = $_POST["prezime"] ?? "";
+    $email = $_POST["email"] ?? "";
+    $upit = $_POST["upit"] ?? "";
 
-if ($conn->connect_error) {
-    $saved = false;
-} else {
-    $ime = trim($_POST["ime"] ?? "");
-    $prezime = trim($_POST["prezime"] ?? "");
-    $email = trim($_POST["email"] ?? "");
-    $upit = trim($_POST["upit"] ?? "");
+    $stmt = $conn->prepare("INSERT INTO upiti (ime, prezime, email, upit) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $ime, $prezime, $email, $upit);
 
-    if ($ime !== "" && $prezime !== "" && $email !== "" && $upit !== "") {
-        $stmt = $conn->prepare("INSERT INTO upiti (ime, prezime, email, upit) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $ime, $prezime, $email, $upit);
-        $saved = $stmt->execute();
-        $stmt->close();
-    } else {
-        $saved = false;
+    if ($stmt->execute()) {
+        $poruka = "Upit je uspješno poslan.";
     }
 
+    $stmt->close();
     $conn->close();
 }
 ?>
@@ -30,32 +23,16 @@ if ($conn->connect_error) {
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upit</title>
-    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<main class="success-page">
-    <section class="success-box">
-        <?php if ($saved): ?>
-            <h1>Upit je poslan</h1>
-            <p>Hvala na poruci. Odgovorit ćemo u najkraćem roku.</p>
-            <div class="hero-actions">
-                <a href="kontakt.html" class="btn">Novi upit</a>
-                <a href="index.html" class="btn btn-light">Početna</a>
-            </div>
-        <?php else: ?>
-            <h1>Upit nije poslan</h1>
-            <p>Provjeri podatke i pokušaj ponovno.</p>
-            <div class="hero-actions">
-                <a href="kontakt.html" class="btn">Pokušaj ponovno</a>
-                <a href="index.html" class="btn btn-light">Početna</a>
-            </div>
-        <?php endif; ?>
-    </section>
+<header>
+    <h1><?php echo $poruka; ?></h1>
+</header>
+<main>
+    <a class="btn" href="kontakt.html">Natrag na kontakt</a>
+    <a class="btn" href="index.html">Početna</a>
 </main>
-
 </body>
 </html>

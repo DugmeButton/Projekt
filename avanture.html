@@ -9,21 +9,18 @@
 </head>
 <body>
 
-<aside class="side-nav">
-    <a href="#vrh">Vrh</a>
+<div class="vertical-nav">
+    <a href="#vrh">Gore</a>
     <a href="#sredina">Sredina</a>
-    <a href="#dno">Dno</a>
-</aside>
+    <a href="#dno">Dolje</a>
+</div>
 
-<header id="vrh" class="page-header adventures-header">
-    <div class="hero-content">
-        <span class="eyebrow">Aktivna putovanja</span>
-        <h1>Avanture za putnike</h1>
-        <p>Priroda, adrenalin i lokacije za one koji žele više od običnog odmora.</p>
-    </div>
+<header id="vrh">
+    <h1>Avanture</h1>
+    <p>Aktivna putovanja za ljubitelje prirode i adrenalina.</p>
 </header>
 
-<nav class="meni">
+<nav>
     <a href="index.html">Početna</a>
     <a href="destinacije.html">Destinacije</a>
     <a href="avanture.html">Avanture</a>
@@ -32,233 +29,154 @@
 </nav>
 
 <main>
-    <section class="intro">
-        <span class="eyebrow">Iskustva</span>
-        <h2>Izaberi svoj stil avanture</h2>
-        <p>Od planina i džungle do pustinje, fjordova i tropskih otoka.</p>
-    </section>
-
-    <section class="container">
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/alpe.jpg" class="active" alt="Alpe">
-                <img src="slike/alpe2.jpg" alt="Alpe">
-                <img src="slike/alpe3.jpg" alt="Alpe">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/alpe.jpg" alt="Alpe" class="active">
+            <img src="slike/alpe2.jpg" alt="Alpe">
+            <img src="slike/alpe3.jpg" alt="Alpe">
             </div>
-            <div class="card-content">
-                <h2>Alpe</h2>
-                <p>Planinarenje i spektakularni pogledi.</p>
-                <div class="info">
-                    <span>5 dana</span>
-                    <span>450€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=45.9763,7.6586&output=embed" loading="lazy"></iframe>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Alpe</h2>
+        <p>Planinarenje i lijepi pogledi.</p>
+        <p class="info">5 dana | 450€</p>
+    </article>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/maldivi.jpg" alt="Maldivi" class="active">
+            <img src="slike/maldivi2.jpg" alt="Maldivi">
+            <img src="slike/maldivi3.jpg" alt="Maldivi">
             </div>
-        </article>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/maldivi.jpg" class="active" alt="Maldivi">
-                <img src="slike/maldivi2.jpg" alt="Maldivi">
-                <img src="slike/maldivi3.jpg" alt="Maldivi">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Maldivi</h2>
+        <p>Ronjenje, plaže i tropski odmor.</p>
+        <p class="info">7 dana | 1200€</p>
+    </article>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/afrika.jpg" alt="Safari Afrika" class="active">
+            <img src="slike/afrika2.jpg" alt="Safari Afrika">
+            <img src="slike/afrika3.jpg" alt="Safari Afrika">
             </div>
-            <div class="card-content">
-                <h2>Maldivi</h2>
-                <p>Ronjenje, plaže i tropski odmor.</p>
-                <div class="info">
-                    <span>7 dana</span>
-                    <span>1200€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=4.1755,73.5093&output=embed" loading="lazy"></iframe>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Safari Afrika</h2>
+        <p>Safari vožnje i divlje životinje.</p>
+        <p class="info">6 dana | 900€</p>
+    </article>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/bungee.jpg" alt="Bungee Jumping" class="active">
+            <img src="slike/bungee2.jpg" alt="Bungee Jumping">
+            <img src="slike/bungee3.jpg" alt="Bungee Jumping">
             </div>
-        </article>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/afrika.jpg" class="active" alt="Safari Afrika">
-                <img src="slike/afrika2.jpg" alt="Safari Afrika">
-                <img src="slike/afrika3.jpg" alt="Safari Afrika">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Bungee Jumping</h2>
+        <p>Adrenalinski skokovi za ljubitelje visine.</p>
+        <p class="info">1 dan | 80€</p>
+    </article>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/kamp.jpg" alt="Kampiranje" class="active">
+            <img src="slike/kamp2.jpg" alt="Kampiranje">
+            <img src="slike/kamp3.jpg" alt="Kampiranje">
             </div>
-            <div class="card-content">
-                <h2>Safari Afrika</h2>
-                <p>Safari vožnje i susret s divljim životinjama.</p>
-                <div class="info">
-                    <span>6 dana</span>
-                    <span>900€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=-1.4061,35.0086&output=embed" loading="lazy"></iframe>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Kampiranje</h2>
+        <p>Priroda, mir i noćenje pod zvijezdama.</p>
+        <p class="info">3 dana | 150€</p>
+    </article>
+    <div id="sredina"></div>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/dubai.jpg" alt="Dubai" class="active">
+            <img src="slike/dubai2.jpg" alt="Dubai">
+            <img src="slike/dubai3.jpg" alt="Dubai">
             </div>
-        </article>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/bungee.jpg" class="active" alt="Bungee Jumping">
-                <img src="slike/bungee2.jpg" alt="Bungee Jumping">
-                <img src="slike/bungee3.jpg" alt="Bungee Jumping">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Dubai</h2>
+        <p>Pustinja, dine i vožnja terenskim vozilima.</p>
+        <p class="info">4 dana | 600€</p>
+    </article>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/norveska.jpg" alt="Norveška" class="active">
+            <img src="slike/norveska2.jpg" alt="Norveška">
+            <img src="slike/norveska3.jpg" alt="Norveška">
             </div>
-            <div class="card-content">
-                <h2>Bungee Jumping</h2>
-                <p>Adrenalinski skokovi za ljubitelje visine.</p>
-                <div class="info">
-                    <span>1 dan</span>
-                    <span>80€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=-45.0220,168.7770&output=embed" loading="lazy"></iframe>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Norveška</h2>
+        <p>Fjordovi, vidikovci i hladna priroda.</p>
+        <p class="info">5 dana | 750€</p>
+    </article>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/island.jpg" alt="Island" class="active">
+            <img src="slike/island2.jpg" alt="Island">
+            <img src="slike/island3.jpg" alt="Island">
             </div>
-        </article>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/kamp.jpg" class="active" alt="Kampiranje">
-                <img src="slike/kamp2.jpg" alt="Kampiranje">
-                <img src="slike/kamp3.jpg" alt="Kampiranje">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Island</h2>
+        <p>Gejziri, vulkani i neobični krajolici.</p>
+        <p class="info">6 dana | 850€</p>
+    </article>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/tropi.jpg" alt="Tropska džungla" class="active">
+            <img src="slike/tropi2.jpg" alt="Tropska džungla">
+            <img src="slike/tropi3.jpg" alt="Tropska džungla">
             </div>
-            <div class="card-content">
-                <h2>Kampiranje</h2>
-                <p>Priroda, mir i noćenje pod zvijezdama.</p>
-                <div class="info">
-                    <span>3 dana</span>
-                    <span>150€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=47.5615,13.6495&output=embed" loading="lazy"></iframe>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Tropska džungla</h2>
+        <p>Egzotična priroda i istraživanje prašume.</p>
+        <p class="info">5 dana | 500€</p>
+    </article>
+    <article class="card">
+        <div class="slider">
+            <button type="button" onclick="changeSlide(this,-1)">‹</button>
+            <div class="slides">
+            <img src="slike/zeland.jpg" alt="Novi Zeland" class="active">
+            <img src="slike/zeland2.jpg" alt="Novi Zeland">
+            <img src="slike/zeland3.jpg" alt="Novi Zeland">
             </div>
-        </article>
-
-        <div id="sredina"></div>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/dubai.jpg" class="active" alt="Dubai">
-                <img src="slike/dubai2.jpg" alt="Dubai">
-                <img src="slike/dubai3.jpg" alt="Dubai">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
-            </div>
-            <div class="card-content">
-                <h2>Dubai</h2>
-                <p>Pustinja, dine i vožnja terenskim vozilima.</p>
-                <div class="info">
-                    <span>4 dana</span>
-                    <span>600€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=24.8667,55.3860&output=embed" loading="lazy"></iframe>
-            </div>
-        </article>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/norveska.jpg" class="active" alt="Norveška">
-                <img src="slike/norveska2.jpg" alt="Norveška">
-                <img src="slike/norveska3.jpg" alt="Norveška">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
-            </div>
-            <div class="card-content">
-                <h2>Norveška</h2>
-                <p>Fjordovi, vidikovci i hladna priroda.</p>
-                <div class="info">
-                    <span>5 dana</span>
-                    <span>750€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=62.1049,7.2057&output=embed" loading="lazy"></iframe>
-            </div>
-        </article>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/island.jpg" class="active" alt="Island">
-                <img src="slike/island2.jpg" alt="Island">
-                <img src="slike/island3.jpg" alt="Island">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
-            </div>
-            <div class="card-content">
-                <h2>Island</h2>
-                <p>Gejziri, vulkani i neobični krajolici.</p>
-                <div class="info">
-                    <span>6 dana</span>
-                    <span>850€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=64.3136,-20.3024&output=embed" loading="lazy"></iframe>
-            </div>
-        </article>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/tropi.jpg" class="active" alt="Tropska džungla">
-                <img src="slike/tropi2.jpg" alt="Tropska džungla">
-                <img src="slike/tropi3.jpg" alt="Tropska džungla">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
-            </div>
-            <div class="card-content">
-                <h2>Tropska džungla</h2>
-                <p>Egzotična priroda i istraživanje prašume.</p>
-                <div class="info">
-                    <span>5 dana</span>
-                    <span>500€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=9.3927,-84.1400&output=embed" loading="lazy"></iframe>
-            </div>
-        </article>
-
-        <article class="card adventure-card">
-            <div class="slideshow">
-                <button class="prev" type="button" onclick="changeSlide(this,-1)">‹</button>
-                <div class="slides">
-                <img src="slike/zeland.jpg" class="active" alt="Novi Zeland">
-                <img src="slike/zeland2.jpg" alt="Novi Zeland">
-                <img src="slike/zeland3.jpg" alt="Novi Zeland">
-                </div>
-                <button class="next" type="button" onclick="changeSlide(this,1)">›</button>
-            </div>
-            <div class="card-content">
-                <h2>Novi Zeland</h2>
-                <p>Filmski pejzaži, trekking i prirodne staze.</p>
-                <div class="info">
-                    <span>10 dana</span>
-                    <span>1300€</span>
-                </div>
-                <iframe src="https://www.google.com/maps?q=-44.8710,167.9090&output=embed" loading="lazy"></iframe>
-            </div>
-        </article>
-        <div id="dno"></div>
-    </section>
+            <button type="button" onclick="changeSlide(this,1)">›</button>
+        </div>
+        <h2>Novi Zeland</h2>
+        <p>Trekking, prirodne staze i lijepi krajolici.</p>
+        <p class="info">10 dana | 1300€</p>
+    </article>
 </main>
 
-<script src="script.js"></script>
-
-<footer>
+<footer id="dno">
     <p>© 2026 Avanturistička Putovanja</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -7,17 +7,14 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="contact-page">
 
-<header class="page-header contact-header">
-    <div class="hero-content">
-        <span class="eyebrow">Kontakt</span>
-        <h1>Pošalji upit</h1>
-        <p>Javi se za više informacija o putovanjima i dostupnim ponudama.</p>
-    </div>
+<header>
+    <h1>Kontakt</h1>
+    <p>Pošalji upit za putovanje.</p>
 </header>
 
-<nav class="meni">
+<nav>
     <a href="index.html">Početna</a>
     <a href="destinacije.html">Destinacije</a>
     <a href="avanture.html">Avanture</a>
@@ -25,23 +22,25 @@
     <a href="kontakt.html">Kontakt</a>
 </nav>
 
-<main class="contact-box">
-    <h2>Kontakt obrazac</h2>
-    <form action="spremi_upit.php" method="POST">
-        <label for="ime">Ime</label>
-        <input type="text" id="ime" name="ime" required>
+<main>
+    <section class="box">
+        <h2>Kontakt obrazac</h2>
+        <form action="spremi_upit.php" method="POST">
+            <label for="ime">Ime</label>
+            <input type="text" id="ime" name="ime" required>
 
-        <label for="prezime">Prezime</label>
-        <input type="text" id="prezime" name="prezime" required>
+            <label for="prezime">Prezime</label>
+            <input type="text" id="prezime" name="prezime" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-        <label for="upit">Poruka</label>
-        <textarea id="upit" name="upit" required></textarea>
+            <label for="upit">Poruka</label>
+            <textarea id="upit" name="upit" required></textarea>
 
-        <button type="submit">Pošalji upit</button>
-    </form>
+            <button type="submit">Pošalji</button>
+        </form>
+    </section>
 </main>
 
 <footer>

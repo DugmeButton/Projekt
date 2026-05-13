@@ -9,19 +9,12 @@
 </head>
 <body>
 
-<header id="vrh" class="home-header">
-    <div class="hero-content">
-        <span class="eyebrow">Putovanja i avanture</span>
-        <h1>Avanturistička Putovanja</h1>
-        <p>Istraži poznate gradove, prirodne ljepote i adrenalinska iskustva na jednom mjestu.</p>
-        <div class="hero-actions">
-            <a href="destinacije.html" class="btn">Destinacije</a>
-            <a href="avanture.html" class="btn btn-light">Avanture</a>
-        </div>
-    </div>
+<header>
+    <h1>Avanturistička Putovanja</h1>
+    <p>Putovanja, destinacije i avanture na jednom mjestu.</p>
 </header>
 
-<nav class="meni">
+<nav>
     <a href="index.html">Početna</a>
     <a href="destinacije.html">Destinacije</a>
     <a href="avanture.html">Avanture</a>
@@ -30,86 +23,50 @@
 </nav>
 
 <main>
-    <section class="intro">
-        <span class="eyebrow">Pregled ponude</span>
-        <h2>Jednostavno pronađi sljedeće putovanje</h2>
-        <p>Stranica prikazuje odabrane destinacije i avanture s osnovnim informacijama, cijenama, trajanjem i lokacijama na karti.</p>
+    <section class="box">
+        <h2>O stranici</h2>
+        <p>Ova stranica prikazuje nekoliko poznatih destinacija i avantura. Za svaku ponudu navedeni su osnovni podaci, trajanje i cijena.</p>
     </section>
 
-    <section class="stats">
-        <div>
-            <strong>15</strong>
-            <span>lokacija</span>
-        </div>
-        <div>
-            <strong>5</strong>
-            <span>destinacija</span>
-        </div>
-        <div>
-            <strong>10</strong>
-            <span>avantura</span>
-        </div>
-    </section>
-
-    <section class="container grid">
-        <article class="text-card">
+    <section class="grid">
+        <div class="card">
             <h2>Destinacije</h2>
-            <p>Gradovi poput Pariza, Rima, Barcelone, Amsterdama i Londona idealni su za putnike koji vole kulturu, šetnje i poznate znamenitosti.</p>
-            <a href="destinacije.html" class="text-link">Pogledaj destinacije</a>
-        </article>
+            <p>Gradovi poput Pariza, Rima, Barcelone, Amsterdama i Londona.</p>
+            <a class="btn" href="destinacije.html">Pogledaj</a>
+        </div>
 
-        <article class="text-card">
+        <div class="card">
             <h2>Avanture</h2>
-            <p>Planine, safari, ronjenje, kampiranje i ekstremni sportovi namijenjeni su svima koji žele aktivnije i drugačije putovanje.</p>
-            <a href="avanture.html" class="text-link">Pogledaj avanture</a>
-        </article>
+            <p>Planine, safari, ronjenje, kampiranje i ekstremni sportovi.</p>
+            <a class="btn" href="avanture.html">Pogledaj</a>
+        </div>
 
-        <article class="text-card">
+        <div class="card">
             <h2>Karta</h2>
-            <p>Interaktivna karta prikazuje sve dostupne lokacije kako bi lakše usporedio gdje se nalaze putovanja.</p>
-            <a href="karta.html" class="text-link">Otvori kartu</a>
-        </article>
+            <p>Na karti su prikazane sve lokacije iz ponude.</p>
+            <a class="btn" href="karta.html">Otvori kartu</a>
+        </div>
 
-        <article class="text-card">
+        <div class="card">
             <h2>Kontakt</h2>
-            <p>Putem kontakt obrasca možeš poslati upit za putovanje ili zatražiti više informacija o određenoj ponudi.</p>
-            <a href="kontakt.html" class="text-link">Pošalji upit</a>
-        </article>
+            <p>Pošalji upit za više informacija o putovanju.</p>
+            <a class="btn" href="kontakt.html">Kontakt</a>
+        </div>
     </section>
 
-    <section class="container table-card">
+    <section>
         <h2>Aktivnosti po sezoni</h2>
         <table>
-            <tr>
-                <th>Aktivnost</th>
-                <th>Zima</th>
-                <th>Ljeto</th>
-            </tr>
-            <tr>
-                <td>Planinarenje</td>
-                <td>Snježne ture i zimska oprema</td>
-                <td>Duge šetnje i otvoreni vidici</td>
-            </tr>
-            <tr>
-                <td>More</td>
-                <td>Mirniji odmor i wellness</td>
-                <td>Kupanje, ronjenje i izleti</td>
-            </tr>
-            <tr>
-                <td>Gradovi</td>
-                <td>Muzeji i zimski sajmovi</td>
-                <td>Festivali, šetnje i događaji</td>
-            </tr>
-            <tr>
-                <td>Ekstremni sportovi</td>
-                <td>Skijanje i snowboard</td>
-                <td>Rafting, bungee i ronjenje</td>
-            </tr>
+            <tr><th>Aktivnost</th><th>Zima</th><th>Ljeto</th></tr>
+            <tr><td>Planinarenje</td><td>Snježne ture</td><td>Duge šetnje</td></tr>
+            <tr><td>More</td><td>Wellness</td><td>Kupanje i ronjenje</td></tr>
+            <tr><td>Gradovi</td><td>Muzeji</td><td>Festivali</td></tr>
+            <tr><td>Ekstremni sportovi</td><td>Skijanje</td><td>Rafting i bungee</td></tr>
         </table>
     </section>
 </main>
 
-<footer id="dno">
+<footer>
     <p>© 2026 Avanturistička Putovanja</p>
 </footer>
 
